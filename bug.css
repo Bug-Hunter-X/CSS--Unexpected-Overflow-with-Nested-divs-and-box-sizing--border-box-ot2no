@@ -1,0 +1,10 @@
+The following CSS rule is causing unexpected behavior:
+
+```css
+div {
+  width: 100%;
+  box-sizing: border-box;
+}
+```
+
+This seems simple, but the issue arises when the `div` is nested within other elements that also use `box-sizing: border-box`.  The `100%` width calculation becomes unpredictable, leading to unexpected layout quirks, often causing the inner `div` to overflow its parent.
