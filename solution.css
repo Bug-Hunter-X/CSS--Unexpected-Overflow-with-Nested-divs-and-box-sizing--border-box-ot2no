@@ -1,0 +1,36 @@
+Several solutions exist, depending on your layout goals. Here are two common approaches:
+
+**1. Explicit Widths:**
+
+Instead of relying on percentages, consider using explicit widths for your nested divs. This avoids the ambiguity introduced by `box-sizing: border-box` calculations.
+
+```css
+div {
+  box-sizing: border-box;
+}
+
+.parent {
+  width: 500px;
+}
+
+.child {
+  width: 400px; /* Explicit width */
+}
+```
+
+**2. Using Flexbox or Grid:**
+
+Flexbox or Grid offer robust layout mechanisms that handle these kinds of situations more cleanly. These approaches provide a better management system for element sizing and alignment, reducing the chance of unexpected overflow issues.
+
+```css
+.parent {
+  display: flex;
+  width: 500px;
+}
+
+.child {
+  flex: 1; /* Child div takes available space */
+}
+```
+
+Choose the solution that best fits your project's layout structure.  Using explicit widths is simpler for basic scenarios; for complex layouts, Flexbox or Grid is often recommended for better maintainability and control.
